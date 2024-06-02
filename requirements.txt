@@ -1,12 +1,10 @@
-os
 streamlit
 pandas
 numpy
 gspread
-google.oauth2.service_account
-gspread_dataframe
-dotenv
-geopy.geocoders
-geopy.exc
+google-auth
+gspread-dataframe
+python-dotenv
+geopy
 folium
-streamlit_folium
+streamlit-folium
