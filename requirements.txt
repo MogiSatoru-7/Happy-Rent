@@ -1,0 +1,12 @@
+os
+streamlit
+pandas
+numpy
+gspread
+google.oauth2.service_account
+gspread_dataframe
+dotenv
+geopy.geocoders
+geopy.exc
+folium
+streamlit_folium
