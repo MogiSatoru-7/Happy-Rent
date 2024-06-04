@@ -36,7 +36,7 @@ def load_data_from_spreadsheet():
         'https://www.googleapis.com/auth/drive'
     ]
 
-    credentials = Credentials.from_service_account_file(
+    credentials = Credentials.from_service_account_info(
         SP_CREDENTIAL_FILE,
         scopes=scopes
     )
