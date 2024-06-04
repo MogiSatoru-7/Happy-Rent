@@ -13,9 +13,9 @@ import folium
 from streamlit_folium import folium_static
 
 
-# 環境変数から認証情報を取得
-SPREADSHEET_ID = os.getenv("SPREADSHEET_ID")
-SERVICE_ACCOUNT_JSON = os.getenv("SERVICE_ACCOUNT_JSON")
+# Streamlit_Shere_Sercret環境変数から認証情報を取得
+SPREADSHEET_ID = st.secrets["SPREADSHEET"]["ID"]
+SERVICE_ACCOUNT_INFO = st.secrets["SERVICE_ACCOUNT"]
 SP_SHEET     = 'tech0_01' # sheet名
 
 # セッション状態の初期化
@@ -29,7 +29,7 @@ def toggle_show_all():
 # スプレッドシートからデータを読み込む関数
 def load_data_from_spreadsheet():
     # googleスプレッドシートの認証 jsonファイル読み込み(key値はGCPから取得)
-    SP_CREDENTIAL_FILE = json.loads(SERVICE_ACCOUNT_JSON)
+    SP_CREDENTIAL_FILE = json.loads(json.dumps(SERVICE_ACCOUNT_INFO))
 
     scopes = [
         'https://www.googleapis.com/auth/spreadsheets',
