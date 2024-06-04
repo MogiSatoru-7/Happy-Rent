@@ -29,7 +29,7 @@ def toggle_show_all():
 # スプレッドシートからデータを読み込む関数
 def load_data_from_spreadsheet():
     # googleスプレッドシートの認証 jsonファイル読み込み(key値はGCPから取得)
-    SP_CREDENTIAL_FILE = json.loads(json.dumps(SERVICE_ACCOUNT_INFO))
+    SP_CREDENTIAL_FILE = SERVICE_ACCOUNT_INFO
 
     scopes = [
         'https://www.googleapis.com/auth/spreadsheets',
